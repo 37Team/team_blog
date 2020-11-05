@@ -1,6 +1,7 @@
 ---
 title: appium 入门参考
 date: 2020-11-05 15:21:06
+category: iOS
 tags: 
 - appium 
 - iOS
