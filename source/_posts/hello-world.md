@@ -2,5 +2,5 @@
 title: Hello World
 ---
 ```Swift
-// TODO: 欢迎辞
+// TODO: 添加欢迎辞
 ```
