@@ -97,7 +97,7 @@ driver.find_element_by_ios_class_chain('**/XCUIElementTypeButton[`label == "登�
 ```
 * * *
 `**/` 符号放在了`selector`开头，作用是避免在根层级直接查找元素。此外，正如`ios-class-chain`名称本身所示，我们能**链式组合**出更精确更复杂的`selector`去满足查找需求，`**/`符号此时可能出现在`selector`中间。含义指后面的元素不是当前层级的直接子代（child），是间接子代（子代的子代，descendant）。
-```
+```Python
 **/XCUIElementTypeCell[`name BEGINSWITH "D"`]/**/XCUIElementTypeButton
 ```
 
@@ -107,7 +107,7 @@ driver.find_element_by_ios_class_chain('**/XCUIElementTypeButton[`label == "登�
 
 * * *
 
-```
+```Python
 [`label == "登录"`]
 ```
 方括号里面的表达式叫**谓词表达式**，是被查找控件的**约束条件**。此谓词表达式的含义是：**label属性等于登录**。除了表示相等的`==`运算符，表达式能用的运算符，还有逻辑表达式的 `AND`,字符串比较的`BEGINSWITH`等等。appium的[iOS谓词指南](http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/)以及苹果的[谓词编程指南](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/AdditionalChapters/Introduction.html)作了更详细的介绍。
@@ -119,7 +119,7 @@ driver.find_element_by_ios_class_chain('**/XCUIElementTypeButton[`label == "登�
 * * *
 
 表达式左边还有一个属性也很常见：`name`。假如在 **iOS** 端已经给控件**提前适配**了标识符(参考侵入式查找策略一节)，名为：`ctrl_access_id`，谓词表达式就可写成：
-```
+```Python
 [`name == "ctrl_access_id"`]
 ```
 * * *
