@@ -3,11 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: 37 Team
+subtitle: '37手游iOS团队博客'
 description: ''
 keywords:
-author: John Doe
+- iOS
+- Swift
+- Objective-C
+author: 37team
 language: en
 timezone: ''
 
@@ -98,7 +101,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: even
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
