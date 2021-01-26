@@ -1,5 +1,14 @@
 # iOS静态库与动态库集成问题
-
+---
+title: iOS静态库与动态库集成问题
+date: 2021-1-26 20:55:06
+category: iOS
+tags: 
+- 静态库
+- 动态库
+- 集成
+- Coacoapod
+---
 ### 情况一：第三方静态库，被自己的动态库、App同时集成：
 - 经典警告：
 `One of the two will be used. Which one is undefined.`
