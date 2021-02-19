@@ -6,19 +6,19 @@ tags:
 - 请求拦截
 - NSURLProtocol
 ---
-###背景
+### 背景
 有时候我们会有些特别的想法：
 1. 查看或动态修改网络的请求与返回的参数
 2. 实现自己的缓存规则
 
 
-###原理
+### 原理
 NSURLProtocol可以用于数据请求和数据返回的拦截与修改。具体工作流程，如下。
 
-###具体工作流程
+### 具体工作流程
 需要了解一下`URL Loading System`（ULS）工作原理。每当我们发出一个请求的时候，ULS会询问`NSURLProtocol`注册的子类是否需要拦截，需要拦截的话，处理完，再扔回ULS询问。为了避免这个问题，每次拦截完之后，需要标记一下已拦截过，下次再询问就不要再拦截了。 
 
-###注意事项
+### 注意事项
 1. NSURLSession需要注意：对于基于NSURLSession的网络请求，需要通过配置NSURLSessionConfiguration对象的protocolClasses属性。
 ```objectivec
 NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -26,10 +26,10 @@ sessionConfiguration.protocolClasses = @[[NSClassFromString(@"CustomURLProtocol"
 ```
 2. NSURLConnection：直接registerClass就可以用
 
-###扩展
+### 扩展
 [iOS - 让WKWebView 支持 NSURLProtocol](https://www.cnblogs.com/junhuawang/p/8466128.html)
 
-###最后附上您可能用得着的代码
+### 最后附上您可能用得着的代码
 拦截修改请求的一个类
 ```
 //RSURLProtocol.h
@@ -226,5 +226,5 @@ static NSString * const RSURLProtocolHandledKey = @"RSURLProtocolHandledKey";
 @end
 ```
 
-###参考资料
+### 参考资料
 [NSURLProtocol拦截 HTTP 请求](https://blog.csdn.net/u014600626/article/details/108195234)
